@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUCHTECH DIGITAL SOLUTIONS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(to bottom, #0a0f2c, #112244, #184366, #1f5a88, #2672aa);
+            color: black;
+        }
+        header {
+            background: #0a0f2c;
+            color: #66ccff;
+            padding: 20px;
+        }
+        nav {
+            background: #112244;
+            padding: 10px;
+        }
+        nav a {
+            color: #66ccff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .hero {
+            background: url('https://i.imgur.com/Ve8wBWm.jpeg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .services {
+            background: url('https://i.imgur.com/AUcBDgo.jpeg') no-repeat center center/cover;
+            background-size: cover;
+            padding: 40px 20px;
+            color: black;
+        }
+        .services h2 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: black;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 2;
+        }
+        .services li {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s, background 0.3s;
+            cursor: pointer;
+            color: black;
+        }
+        .services li:hover {
+            background: #66ccff;
+            color: black;
+            transform: scale(1.1);
+        }
+        .contact {
+            background: #184366;
+            padding: 40px 20px;
+            color: #66ccff;
+        }
+        footer {
+            background: #0a0f2c;
+            color: #66ccff;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+        }
+        button {
+            background: #00ccff;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0099cc;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: black;
+        }
+        .logo {
+            margin-top: 20px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.imgur.com/Q0gk7La.jpeg" alt="MUCHTECH Logo" class="logo">
+        <h1>MUCHTECH DIGITAL SOLUTIONS</h1>
+        <p>Your Trusted Partner in Digital Transformation</p>
+    </header>
+    <nav>
+        <a href="#services">Our Services</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="hero">
+        Empowering Businesses with Cutting-Edge Digital Solutions
+    </div>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li onclick="showDescription('Website Development')">Website Development</li>
+            <li onclick="showDescription('Mobile App Development')">Mobile App Development</li>
+            <li onclick="showDescription('Computer Repair and Maintenance')">Computer Repair and Maintenance</li>
+            <li onclick="showDescription('CCTV Installation')">CCTV Installation</li>
+            <li onclick="showDescription('Cyber Security')">Cyber Security</li>
+            <li onclick="showDescription('IT Sales')">IT Sales</li>
+            <li onclick="showDescription('IT Consulting')">IT Consulting</li>
+        </ul>
+        <p id="serviceDescription" style="margin-top: 20px; font-size: 18px; color: black;"></p>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@muchtech.com</p>
+        <p>Phone: +254740469916</p>
+    </section>
+    <footer>
+        &copy; 2025 MUCHTECH DIGITAL SOLUTIONS. All Rights Reserved.
+    </footer>
+    <script>
+        function showDescription(service) {
+            const descriptions = {
+                'Website Development': 'We create professional, responsive websites tailored to your business needs, enhancing online presence and engagement.',
+                'Mobile App Development': 'Custom mobile apps to streamline your operations, improve customer interaction, and boost productivity.',
+                'Computer Repair and Maintenance': 'Expert computer repair and maintenance services to ensure your business runs smoothly without interruptions.',
+                'CCTV Installation': 'Advanced security solutions with high-tech CCTV installation to safeguard your premises.',
+                'Cyber Security': 'Protect your business from cyber threats with our robust security solutions and threat management systems.',
+                'IT Sales': 'Providing the best IT equipment and software to keep your business technologically ahead.',
+                'IT Consulting': 'Professional IT consulting services to optimize your business’s tech infrastructure and strategy.'
+            };
+            document.getElementById("serviceDescription").innerText = descriptions[service] || "Click on a service to see more details.";
+        }
+    </script>
+</body>
+</html>
